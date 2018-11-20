@@ -30,7 +30,7 @@ class App extends Component {
           if (todosCopy[i] === current) {
             found = true;
             i = todosCopy.length;
-            this.setState({todoFound: true});
+            //this.setState({todoFound: found});
           }
         }
         if (!found) {
@@ -38,7 +38,7 @@ class App extends Component {
           this.setState({todos: todosCopy, currentTodo: ""});
         } // raise alert event in else case
 
-        this.setState({todoFound: false});
+        this.setState({todoFound: found});
 
     }
     onRemoveAll = () => {
